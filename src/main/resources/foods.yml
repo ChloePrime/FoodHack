@@ -1,0 +1,32 @@
+#这只是个例子。。。
+mole:
+  #食物的名字，可以是普通字符串（将运用全局正则表达式）或者是"regex:"开头+独立的正则表达式
+  name: "地鼠"
+  #修改后的饥饿值，留空则不修改效果
+  hunger: 16
+  #玩家食用后收到的消息
+  message: "§6你脚滑了！"
+  #生命值变化，正数回血，负数会受到伤害
+  health: -4
+  #药水效果
+  effect:
+    -
+      type: "LEVITATION"
+      level: 40
+      duration: 2
+      particle: false
+    -
+      type: "SLOW"
+      level: 125
+      duration: 60
+      particle: false
+  #标题
+  title:
+    title: "§6你被地鼠顶了起来！"
+    subtitle: ""
+    fade-in: 0
+    stay: 30
+    fade-out: 10
+  #是否执行脚本
+  #实际上执行的是脚本文件中与这一个配置组（本例中的mole）同名的函数
+  script: true

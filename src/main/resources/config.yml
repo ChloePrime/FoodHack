@@ -1,0 +1,4 @@
+#默认的匹配正则表达式，使用{item}代替具体的道具名称
+default-regex: "(§.)*(\\+\\d+?(§.)*\\s*(§.)*)?{item}"
+script-language: "ECMAScript"
+script-file: "script.js"

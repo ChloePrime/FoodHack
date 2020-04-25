@@ -1,0 +1,48 @@
+  name: FoodHack
+  main: com.github.chloekoopa.foodhack.FoodHack
+  version: "1.0.1"
+  commands:
+    food:
+      description: command for this plugin
+      usage: §csee §a/food help §cfor help
+      permission: foodhack
+      permission-message: You don't have the permission to use this command!
+  permissions:
+    #内置权限组
+    foodhack.admin:
+      description: gives admin functions to the command
+      default: op
+      children:
+        foodhack: true
+        foodhack.list: true
+        foodhack.query: true
+        foodhack.reload: true
+        foodhack.try: true
+    foodhack.*:
+      description: gives all permissions including the debug permission
+      default: false
+      children:
+        foodhack.admin: true
+        foodhack.debug: true
+    #具体的权限
+    foodhack:
+      description: basic permission for /food command
+      default: op
+    foodhack.create:
+      description: Allows creating hacks with json
+      default: op
+    foodhack.list:
+      description: Allows getting a list of all hacks' key
+      default: op
+    foodhack.query:
+      description: Allows querying a hack by its key
+      default: op
+    foodhack.reload:
+      description: Allows reloading this plugin by performing /food reload.
+      default: op
+    foodhack.try:
+      description: Allows the [/food try] command (try a hacked food by name)
+      default: op
+    foodhack.debug:
+      description: Gets the error message when script gets error
+      default: false
